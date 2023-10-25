@@ -1,0 +1,342 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1360px;
+  padding: 0 20px 0 20px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #222222;
+  font-family: "Roboto", sans-serif;
+}
+
+.header__inner {
+  margin-top: 20px;
+  display: flex;
+  padding: 0px 30px;
+  border-radius: 8px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#burger-menu {
+  display: none;
+}
+.header__inner-logo {
+  height: auto;
+  width: auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.header__inner-logo p {
+  color: white;
+  letter-spacing: 2px;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.header__link {
+  width: 4rem;
+  margin: 10px 0;
+  height: 4rem;
+  background-image: url("../assets/YamatoLogo.png");
+  background-size: cover;
+}
+.header__nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  position: relative;
+  letter-spacing: 1px;
+}
+.header__nav-link:hover::after {
+  width: 50%;
+}
+.header__nav-link:hover::before {
+  width: 50%;
+}
+.header__nav-link::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  left: 0;
+  bottom: 0;
+  height: 0.5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: 0.3s;
+}
+.header__nav-link::before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  right: 0;
+  bottom: 0;
+  height: 0.5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: 0.3s;
+}
+.header__items {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+/* Intro */
+
+.intro__inner {
+  margin: 30px 0;
+  height: 600px;
+  gap: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  flex-direction: row-reverse;
+  overflow: hidden;
+}
+.intro__section {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: white;
+  margin: 50px 0;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 1rem;
+}
+.intro__section::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+}
+.intro__title {
+  margin-bottom: 40px;
+  font-weight: 300;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 20px;
+}
+.intro__title::after {
+  height: 2px;
+  background: rgba(255, 255, 250, 0.5);
+  width: 100%;
+  content: "";
+}
+.intro__title::before {
+  height: 2px;
+  background: rgba(255, 255, 250, 0.5);
+  width: 100%;
+  content: "";
+}
+.intro__subtitle {
+  margin-bottom: 20px;
+  font-weight: 100;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+.intro__btn {
+  text-transform: uppercase;
+  padding: 20px 40px;
+  border-radius: 8px;
+  text-decoration: none;
+  width: fit-content;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  font-size: 1rem;
+  display: block;
+  transition: 0.3s;
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.5);
+}
+.intro__btn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+.intro__info {
+  padding: 5px;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slider {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+
+  border-radius: 8px;
+  width: 100%;
+  height: 600px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.slide-ana {
+  height: 100%;
+}
+.slide-ana div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 1s;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.slider span {
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  font-size: 1.5rem;
+  margin: -25px 0 0 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+.slide-ana {
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+#prev {
+  left: 0;
+  border-radius: 0 10px 10px 0;
+}
+#next {
+  right: 0;
+  border-radius: 10px 0 0 10px;
+}
+#prev svg,
+#next svg {
+  width: 100%;
+  fill: #fff;
+}
+#prev:hover,
+#next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Footer */
+.footer {
+  height: auto;
+  padding: 30px 0;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.footer__inner-link {
+  align-self: center;
+}
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  overflow: hidden;
+}
+.footer__logo-link {
+  width: 10rem;
+  height: 10rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../assets/YamatoLogo.png");
+  color: white;
+}
+.footer__inner-logo {
+  width: auto;
+  height: auto;
+  align-items: center;
+  display: flex;
+
+  gap: 80px;
+  align-self: center;
+}
+.footer__logo-title {
+  color: white;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 1.3rem;
+}
+.footer__inner-nav {
+}
+.footer__nav-title {
+  position: relative;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+.footer__nav-items {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  list-style-type: none;
+}
+.footer__nav-item {
+}
+.footer__nav-link {
+  color: white;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 200;
+  font-size: 0.9rem;
+}
+.footer__nav-link:hover {
+  color: grey;
+}
+.footer__inner-contacts {
+}
+.footer__contacts-title {
+  color: white;
+  margin-bottom: 15px;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+.footer__contacts-links {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 10px;
+}
+.footer__contacts-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style-type: none;
+}
+.footer__contacts-item {
+  color: white;
+  font-weight: 200;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+.footer__contacts-link:hover {
+  color: grey;
+}
+.footer__contacts-link {
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 200;
+}
