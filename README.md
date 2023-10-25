@@ -1,0 +1,2 @@
+# Yamato
+Yamato Official Site
