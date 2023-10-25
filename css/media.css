@@ -183,4 +183,7 @@
   .header__inner-logo p span {
     display: none;
   }
+  .intro__title {
+    font-size: 1.3rem;
+  }
 }
