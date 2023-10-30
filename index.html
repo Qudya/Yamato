@@ -11,12 +11,6 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
       rel="stylesheet"
     />
-    <!-- Logo -->
-    <link
-      rel="shortcut icon"
-      href="assets/YamatoLogo.png"
-      type="image/x-icon"
-    />
     <!-- JS -->
     <script src="js/app.js" defer></script>
     <!-- Font Awesome -->
@@ -27,6 +21,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -57,13 +58,7 @@
                 <a href="" class="header__nav-link">Общий зал</a>
               </li>
               <li class="header__item">
-                <a href="" class="header__nav-link">Соц. сети</a>
-              </li>
-              <li class="header__item">
                 <a href="" class="header__nav-link">Прайс лист</a>
-              </li>
-              <li class="header__item">
-                <a href="" class="header__nav-link">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -82,28 +77,17 @@
         </h1>
         <div class="intro__inner">
           <div class="slider">
-            <div class="slide-ana">
-              <div
-                style="
-                  background-image: url('/assets/anime-black-and-white-kvprlq5w5vvcar6g.jpg');
-                  background-size: cover;
-                "
-              ></div>
-              <div
-                style="
-                  background-image: url('/assets/demon_slayer_kimetsu_no_yaiba_on_black_and_white_4k_5k_hd_anime-1920x1080.jpg');
-                  background-size: cover;
-                "
-              ></div>
-              <div
-                style="
-                  background-image: url('/assets/white-anime-background-txr0xudlgu1w295m.jpg');
-                  background-size: cover;
-                "
-              ></div>
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide slide-1"></div>
+                <div class="swiper-slide slide-2"></div>
+                <div class="swiper-slide slide-3"></div>
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
             </div>
-            <span class="icon-arrow_back" id="prev"></span>
-            <span class="icon-arrow_forward" id="next"></span>
           </div>
           <div class="intro__info">
             <h1 class="intro__title">Yamato | Cyber Club</h1>

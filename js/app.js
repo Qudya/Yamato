@@ -5,52 +5,47 @@ burgerMenu.addEventListener("click", function () {
   overlay.classList.toggle("overlay");
 });
 
-let arrowIconLeft =
-  '<?xml version="1.0" ?><!DOCTYPE svg  PUBLIC \'-//W3C//DTD SVG 1.1//EN\'  \'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\'><svg height="50px" id="Layer_1" style="enable-background:new 0 0 50 50;" version="1.1" viewBox="0 0 512 512" width="50px" color="#fff" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="352,115.4 331.3,96 160,256 331.3,416 352,396.7 201.5,256 "/></svg>';
+let head = document.head;
 
-let slides = document.querySelectorAll(".slide-ana div");
-let slideSayisi = slides.length;
+if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+  let linkFav = document.createElement("link");
+  linkFav.setAttribute("rel", "shorcut icon");
+  linkFav.setAttribute("href", "../assets/YamatoLogo.png");
 
-let prev = document.getElementById("prev");
-let next = document.getElementById("next");
-prev.innerHTML = arrowIconLeft;
-next.innerHTML = arrowIconLeft;
-next.querySelector("svg").style.transform = "rotate(180deg)";
+  head.append(linkFav);
+} else {
+  let linkFav = document.createElement("link");
+  linkFav.setAttribute("rel", "shorcut icon");
+  linkFav.setAttribute("href", "../assets/YamatoLogoBlack.png");
 
-for (let index = 0; index < slides.length; index++) {
-  const element = slides[index];
-  element.style.transform = "translateX(" + 100 * index + "%)";
-}
-let loop = 0 + 1000 * slideSayisi;
-
-setInterval(() => {
-  goNext();
-}, 5000);
-
-function goNext() {
-  loop++;
-  for (let index = 0; index < slides.length; index++) {
-    const element = slides[index];
-    element.style.transform =
-      "translateX(" + 100 * (index - (loop % slideSayisi)) + "%)";
-  }
+  head.append(linkFav);
 }
 
-function goPrev() {
-  loop--;
-  for (let index = 0; index < slides.length; index++) {
-    const element = slides[index];
-    element.style.transform =
-      "translateX(" + 100 * (index - (loop % slideSayisi)) + "%)";
-  }
-}
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
 
-next.addEventListener("click", goNext);
-prev.addEventListener("click", goPrev);
-document.addEventListener("keydown", function (e) {
-  if (e.code === "ArrowRight") {
-    goNext();
-  } else if (e.code === "ArrowLeft") {
-    goPrev();
-  }
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    enabled: false,
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    enabled: false,
+  },
+  autoplay: {
+    delay: 3000,
+    enabled: true,
+  },
 });
