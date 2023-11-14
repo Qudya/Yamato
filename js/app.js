@@ -7,20 +7,6 @@ burgerMenu.addEventListener("click", function () {
 
 let head = document.head;
 
-if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-  let linkFav = document.createElement("link");
-  linkFav.setAttribute("rel", "shorcut icon");
-  linkFav.setAttribute("href", "../assets/YamatoLogo.png");
-
-  head.append(linkFav);
-} else {
-  let linkFav = document.createElement("link");
-  linkFav.setAttribute("rel", "shorcut icon");
-  linkFav.setAttribute("href", "../assets/YamatoLogoBlack.png");
-
-  head.append(linkFav);
-}
-
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   direction: "horizontal",
