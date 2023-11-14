@@ -196,13 +196,13 @@ body {
   background-repeat: no-repeat;
 }
 .slide-1 {
-  background-image: url("https://wallpapers.com/images/featured/sad-anime-4k-zu9z8d7ipb6c9f5i.jpg");
+  background: grey;
 }
 .slide-2 {
-  background-image: url("https://wallpapers.com/images/hd/black-and-white-sad-anime-4k-man-qzekx8iiibwk0tbq.jpg");
+  background: white;
 }
 .slide-3 {
-  background-image: url("https://cdn.wallpapersafari.com/25/45/uRrkBe.jpg");
+  background: black;
 }
 
 /* Footer */
