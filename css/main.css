@@ -322,5 +322,9 @@ body {
 .footer__contacts-link {
   text-decoration: none;
 }
+.footer__phone-number {
+  text-decoration: none;
+  color: white;
+}
 
 /* Stocks */
